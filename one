@@ -1,0 +1,20 @@
+CREATE DATABASE exemplo_banco;
+//
+USE exemplo_banco;
+
+CREATE TABLE clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    telefone VARCHAR(20) NOT NULL
+);
+//
+INSERT INTO clientes (nome, email, telefone) VALUES
+    ('João', 'joao@example.com', '(11) 1234-5678'),
+    ('Maria', 'maria@example.com', '(22) 9876-5432'),
+    ('Pedro', 'pedro@example.com', '(33) 5555-5555');
+//
+SELECT * FROM clientes;
+//
+DELETE FROM clientes WHERE id = 3;
+//
